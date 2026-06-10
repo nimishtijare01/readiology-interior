@@ -268,9 +268,9 @@ export default function Home() {
               <span className="px-4 py-2 border border-primary/20 bg-white text-xs tracking-widest uppercase rounded-full">CCTV Surveillance</span>
             </div>
           </div>
-          <div className="flex-1 grid grid-cols-2 gap-4">
+          <div className="flex-1 grid grid-cols-2 gap-4 items-center">
             <img src="/images/brochure_p10_img1.jpeg" alt="Accommodation" className="w-full h-64 object-cover border border-border" />
-            <img src="/images/brochure_p10_img2.jpeg" alt="Accommodation Room" className="w-full h-64 object-cover border border-border mt-8" />
+            <img src="/images/brochure_p10_img2.jpeg" alt="Accommodation Room" className="w-full h-64 object-cover border border-border" />
           </div>
         </div>
       </section>
