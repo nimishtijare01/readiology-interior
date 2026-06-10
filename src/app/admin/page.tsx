@@ -32,9 +32,9 @@ export default function AdminDashboard() {
   };
 
   const getTierName = (tier: number) => {
-    if (tier === 3) return "Premium Executive";
-    if (tier === 2) return "Comfort Focus";
-    return "Minimalist Desk";
+    if (tier === 3) return "Readiology Elite";
+    if (tier === 2) return "Readiology 2.0";
+    return "Readiology 2.1";
   };
 
   // Group by tiers
@@ -164,9 +164,9 @@ export default function AdminDashboard() {
           </span>
         </div>
         
-        {renderSeatGrid(tier1, "Minimalist Desk")}
-        {renderSeatGrid(tier2, "Comfort Focus")}
-        {renderSeatGrid(tier3, "Premium Executive")}
+        {renderSeatGrid(tier1, "Readiology 2.1")}
+        {renderSeatGrid(tier2, "Readiology 2.0")}
+        {renderSeatGrid(tier3, "Readiology Elite")}
       </div>
     </div>
   );

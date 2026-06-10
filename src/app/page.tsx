@@ -6,10 +6,23 @@ import {
   ThermometerSnowflake,
   Coffee,
   Shield,
-  ArrowRight,
   Armchair,
   Lamp,
   Sofa,
+  Clock,
+  Droplets,
+  Zap,
+  Cctv,
+  Wind,
+  Refrigerator,
+  Utensils,
+  MessageSquare,
+  MapPin,
+  Plane,
+  Train,
+  TrainFront,
+  Bus,
+  Car
 } from "lucide-react";
 
 export default function Home() {
@@ -18,7 +31,6 @@ export default function Home() {
       {/* ───── Hero Section ───── */}
       <section className="relative w-full min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-[#F5F3EB] -z-20" />
-        {/* Subtle decorative grid/texture can go here */}
         <div
           className="absolute inset-0 opacity-[0.03] -z-10"
           style={{
@@ -30,7 +42,7 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-10">
           <span className="text-primary text-xs tracking-[0.3em] uppercase font-medium">
-            Elevate Your Study Experience
+            Embraces Excellence
           </span>
 
           <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-serif tracking-tight text-foreground leading-[1.1]">
@@ -39,7 +51,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-2xl font-light leading-relaxed">
-            Premium reading rooms and self-study library designed exclusively for
+            Premium reading rooms, self-study library, and student accommodation designed exclusively for 
             NEET&nbsp;PG &amp; UPSC aspirants. An environment crafted for absolute concentration.
           </p>
 
@@ -56,11 +68,13 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Hero image placeholder (using abstract shape instead to fit aesthetic) */}
-        <div className="w-full max-w-6xl mx-auto mt-20 h-64 md:h-96 relative bg-muted/30 border border-border flex items-center justify-center overflow-hidden">
-           <span className="font-serif italic text-muted-foreground/40 text-2xl tracking-widest">
-             Interior Atmosphere
-           </span>
+        {/* Hero image from brochure */}
+        <div className="w-full max-w-6xl mx-auto mt-20 h-64 md:h-96 relative border border-border flex items-center justify-center overflow-hidden group">
+          <img 
+            src="/images/brochure_p1_img1.jpeg" 
+            alt="Readiology Interior Atmosphere" 
+            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" 
+          />
         </div>
       </section>
 
@@ -81,163 +95,152 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
-            <div className="flex flex-col group">
-              <div className="w-10 h-10 mb-6 flex items-center justify-center border border-border group-hover:border-primary transition-colors">
-                <Wifi className="w-4 h-4 text-primary" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12">
+            {[
+              { icon: Clock, label: "Open 24/7", sub: "365 days a year" },
+              { icon: Wifi, label: "High Speed Wi-Fi", sub: "Enterprise network" },
+              { icon: Droplets, label: "RO Water Purifier", sub: "Safe & clean" },
+              { icon: Zap, label: "Power Back-Up", sub: "Uninterrupted focus" },
+              { icon: Cctv, label: "CCTV Surveillance", sub: "24/7 security" },
+              { icon: Wind, label: "Air Purifier", sub: "Clean breathing" },
+              { icon: ThermometerSnowflake, label: "AC Sections", sub: "Fully equipped" },
+              { icon: Refrigerator, label: "Refrigerator", sub: "Store your food" },
+              { icon: Utensils, label: "Dining Space", sub: "Comfortable eating" },
+              { icon: MessageSquare, label: "Discussion Areas", sub: "Separate & soundproof" },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col group items-center text-center">
+                <div className="w-12 h-12 mb-4 flex items-center justify-center border border-border group-hover:border-primary transition-colors rounded-full bg-[#F5F3EB]">
+                  <item.icon className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="text-sm font-serif mb-1">{item.label}</h3>
+                <p className="text-xs text-muted-foreground font-light">
+                  {item.sub}
+                </p>
               </div>
-              <h3 className="text-lg font-serif mb-3">Enterprise Wi-Fi</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                Zero buffering. Dedicated high-speed networks optimized for video lectures.
-              </p>
-            </div>
-            <div className="flex flex-col group">
-              <div className="w-10 h-10 mb-6 flex items-center justify-center border border-border group-hover:border-primary transition-colors">
-                <ThermometerSnowflake className="w-4 h-4 text-primary" />
-              </div>
-              <h3 className="text-lg font-serif mb-3">Climate Control</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                Optimum temperature maintained 24/7 for comfortable long study hours.
-              </p>
-            </div>
-            <div className="flex flex-col group">
-              <div className="w-10 h-10 mb-6 flex items-center justify-center border border-border group-hover:border-primary transition-colors">
-                <Coffee className="w-4 h-4 text-primary" />
-              </div>
-              <h3 className="text-lg font-serif mb-3">Cafe Lounge</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                Fresh coffee, tea, and quick snacks available round the clock in a separate acoustic zone.
-              </p>
-            </div>
-            <div className="flex flex-col group">
-              <div className="w-10 h-10 mb-6 flex items-center justify-center border border-border group-hover:border-primary transition-colors">
-                <Shield className="w-4 h-4 text-primary" />
-              </div>
-              <h3 className="text-lg font-serif mb-3">Secure Access</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                24/7 CCTV surveillance and secure entry ensuring complete safety.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ───── Pricing Tiers ───── */}
-      <section
-        id="pricing"
-        className="w-full py-32 px-4 bg-[#FDFBF7] border-t border-border"
-      >
+      <section id="pricing" className="w-full py-32 px-4 bg-[#FDFBF7] border-t border-border">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <span className="text-primary text-xs tracking-[0.2em] uppercase font-medium block mb-4">
-              Memberships
+              Our Spaces
             </span>
             <h2 className="text-4xl font-serif text-foreground">
               Select Your Tier
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Tier 1 */}
-            <div className="flex flex-col p-10 border border-border bg-white hover:shadow-xl transition-shadow duration-500">
-              <div className="mb-8">
-                <Armchair className="w-6 h-6 text-primary mb-6" />
-                <h3 className="text-2xl font-serif mb-2">Minimalist</h3>
-                <div className="text-sm text-muted-foreground font-light tracking-wide">
-                  Standard Desk Space
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Readiology 2.1 */}
+            <div className="flex flex-col border border-border bg-white hover:shadow-xl transition-shadow duration-500 overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img src="/images/brochure_p3_img1.jpeg" alt="Readiology 2.1" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-serif mb-2">Readiology 2.1</h3>
+                  <div className="text-sm text-muted-foreground font-light tracking-wide">
+                    Modern Minimalist Aesthetic
+                  </div>
                 </div>
+                <div className="text-3xl font-serif mb-8">
+                  ₹1,000<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
+                </div>
+                <ul className="space-y-4 mb-8 flex-1">
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Comfortable seating
+                  </li>
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Designed to inspire focus
+                  </li>
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Access to all amenities
+                  </li>
+                </ul>
+                <a
+                  href="#seat-matrix"
+                  className="w-full text-center border border-foreground py-3 text-xs tracking-widest uppercase hover:bg-foreground hover:text-background transition-colors"
+                >
+                  Choose 2.1
+                </a>
               </div>
-              <div className="text-3xl font-serif mb-10">
-                ₹1,000<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
-              </div>
-              <ul className="space-y-4 mb-10 flex-1">
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Basic ergonomic chair
-                </li>
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Access to all amenities
-                </li>
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Open layout
-                </li>
-              </ul>
-              <a
-                href="#seat-matrix"
-                className="w-full text-center border border-foreground py-3 text-xs tracking-widest uppercase hover:bg-foreground hover:text-background transition-colors"
-              >
-                Choose Minimalist
-              </a>
             </div>
 
-            {/* Tier 2 */}
-            <div className="flex flex-col p-10 border border-primary bg-primary/5 hover:shadow-xl transition-shadow duration-500 relative">
-              <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-[10px] tracking-widest uppercase">
+            {/* Readiology 2.0 */}
+            <div className="flex flex-col border border-primary bg-primary/5 hover:shadow-xl transition-shadow duration-500 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-[10px] tracking-widest uppercase z-10">
                 Most Popular
               </div>
-              <div className="mb-8">
-                <Lamp className="w-6 h-6 text-primary mb-6" />
-                <h3 className="text-2xl font-serif mb-2">Comfort</h3>
-                <div className="text-sm text-muted-foreground font-light tracking-wide">
-                  Wider Desk &amp; Cushion
+              <div className="h-48 overflow-hidden">
+                <img src="/images/brochure_p4_img1.jpeg" alt="Readiology 2.0" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-serif mb-2">Readiology 2.0</h3>
+                  <div className="text-sm text-muted-foreground font-light tracking-wide">
+                    Escape the Noise
+                  </div>
                 </div>
+                <div className="text-3xl font-serif mb-8">
+                  ₹1,500<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
+                </div>
+                <ul className="space-y-4 mb-8 flex-1">
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Supportive seating
+                  </li>
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Soft lighting
+                  </li>
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Maximize productivity
+                  </li>
+                </ul>
+                <a
+                  href="#seat-matrix"
+                  className="w-full text-center bg-primary text-primary-foreground py-3 text-xs tracking-widest uppercase hover:bg-primary/90 transition-colors"
+                >
+                  Choose 2.0
+                </a>
               </div>
-              <div className="text-3xl font-serif mb-10">
-                ₹1,500<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
-              </div>
-              <ul className="space-y-4 mb-10 flex-1">
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Cushioned office chair
-                </li>
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Extended desk surface
-                </li>
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Dedicated power socket
-                </li>
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Access to all amenities
-                </li>
-              </ul>
-              <a
-                href="#seat-matrix"
-                className="w-full text-center bg-primary text-primary-foreground py-3 text-xs tracking-widest uppercase hover:bg-primary/90 transition-colors"
-              >
-                Choose Comfort
-              </a>
             </div>
 
-            {/* Tier 3 */}
-            <div className="flex flex-col p-10 border border-border bg-white hover:shadow-xl transition-shadow duration-500">
-              <div className="mb-8">
-                <Sofa className="w-6 h-6 text-primary mb-6" />
-                <h3 className="text-2xl font-serif mb-2">Executive</h3>
-                <div className="text-sm text-muted-foreground font-light tracking-wide">
-                  Premium Cubicle Isolation
+            {/* Readiology Elite */}
+            <div className="flex flex-col border border-border bg-white hover:shadow-xl transition-shadow duration-500 overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img src="/images/brochure_p5_img1.jpeg" alt="Readiology Elite" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-serif mb-2">Readiology Elite</h3>
+                  <div className="text-sm text-muted-foreground font-light tracking-wide">
+                    The Ultimate Focused Experience
+                  </div>
                 </div>
+                <div className="text-3xl font-serif mb-8">
+                  ₹2,500<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
+                </div>
+                <ul className="space-y-4 mb-8 flex-1">
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Premium isolation
+                  </li>
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Fresh & hygienic environment
+                  </li>
+                  <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
+                    <div className="w-1 h-1 bg-primary rounded-full" /> Cared for down to the smallest detail
+                  </li>
+                </ul>
+                <a
+                  href="#seat-matrix"
+                  className="w-full text-center border border-foreground py-3 text-xs tracking-widest uppercase hover:bg-foreground hover:text-background transition-colors"
+                >
+                  Choose Elite
+                </a>
               </div>
-              <div className="text-3xl font-serif mb-10">
-                ₹2,500<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
-              </div>
-              <ul className="space-y-4 mb-10 flex-1">
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> High-back ergonomic chair
-                </li>
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Full desk isolation
-                </li>
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Personal reading lamp
-                </li>
-                <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
-                  <div className="w-1 h-1 bg-primary rounded-full" /> Access to all amenities
-                </li>
-              </ul>
-              <a
-                href="#seat-matrix"
-                className="w-full text-center border border-foreground py-3 text-xs tracking-widest uppercase hover:bg-foreground hover:text-background transition-colors"
-              >
-                Choose Executive
-              </a>
             </div>
           </div>
         </div>
@@ -248,25 +251,115 @@ export default function Home() {
         <SeatMatrix />
       </section>
 
+      {/* ───── Accommodation Section ───── */}
+      <section className="w-full py-24 px-4 bg-[#F5F3EB]">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+          <div className="flex-1 space-y-6">
+            <span className="text-primary text-xs tracking-[0.2em] uppercase font-medium">
+              Live the best life
+            </span>
+            <h2 className="text-4xl font-serif text-foreground">Student Accommodation</h2>
+            <p className="text-muted-foreground font-light leading-relaxed">
+              Our student accommodations are meticulously crafted to cater to every aspect of student life, offering a blend of comfort, convenience, and community. Each room is equipped with modern amenities including high-speed internet, study desks, comfortable beds with mattresses, book racks, chairs, and modern washrooms with geysers and ample storage space.
+            </p>
+            <p className="text-muted-foreground font-light leading-relaxed">
+              Common areas feature a cozy garden for relaxation and group study sessions. Safety and security are paramount, with 24/7 monitoring and secure access controls throughout the premises.
+            </p>
+            <div className="pt-4 flex flex-wrap gap-4">
+              <span className="px-4 py-2 border border-primary/20 bg-white text-xs tracking-widest uppercase rounded-full">RO Purifier</span>
+              <span className="px-4 py-2 border border-primary/20 bg-white text-xs tracking-widest uppercase rounded-full">Refrigerator</span>
+              <span className="px-4 py-2 border border-primary/20 bg-white text-xs tracking-widest uppercase rounded-full">CCTV Surveillance</span>
+            </div>
+          </div>
+          <div className="flex-1 grid grid-cols-2 gap-4">
+            <img src="/images/brochure_p10_img1.jpeg" alt="Accommodation" className="w-full h-64 object-cover border border-border" />
+            <img src="/images/brochure_p10_img2.jpeg" alt="Accommodation Room" className="w-full h-64 object-cover border border-border mt-8" />
+          </div>
+        </div>
+      </section>
+
+      {/* ───── Location & Connectivity ───── */}
+      <section className="w-full py-24 px-4 bg-white border-t border-border">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif text-foreground mb-4">Location & Connectivity</h2>
+            <p className="text-muted-foreground font-light">Everything you need is just around the corner - from daily essentials to seamless transport connectivity.</p>
+            <p className="text-muted-foreground font-light italic">"Live where life happens."</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <div className="border p-2 bg-muted/20 rounded-xl overflow-hidden">
+              <img src="/images/brochure_p9_img2.png" alt="Map to Readiology" className="w-full h-auto object-contain mix-blend-multiply" />
+            </div>
+
+            <div className="space-y-12">
+              <div>
+                <h3 className="text-2xl font-serif mb-6 flex items-center gap-3">
+                  <MapPin className="text-primary w-6 h-6" /> Address
+                </h3>
+                <p className="text-lg font-light text-muted-foreground">
+                  306, Vishwakarma Nagar,<br />
+                  South Of Ridge Road,<br />
+                  Nagpur.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-serif mb-6">Connectivity</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-center gap-4 text-muted-foreground">
+                    <div className="w-10 h-10 rounded-full bg-[#F5F3EB] flex items-center justify-center"><Plane className="w-4 h-4 text-primary" /></div>
+                    <span>Airport - <strong className="text-foreground font-medium">7.6 km</strong></span>
+                  </li>
+                  <li className="flex items-center gap-4 text-muted-foreground">
+                    <div className="w-10 h-10 rounded-full bg-[#F5F3EB] flex items-center justify-center"><TrainFront className="w-4 h-4 text-primary" /></div>
+                    <span>Railway Station - <strong className="text-foreground font-medium">2.8 km</strong></span>
+                  </li>
+                  <li className="flex items-center gap-4 text-muted-foreground">
+                    <div className="w-10 h-10 rounded-full bg-[#F5F3EB] flex items-center justify-center"><Train className="w-4 h-4 text-primary" /></div>
+                    <span>Metro Station - <strong className="text-foreground font-medium">2.5 km</strong></span>
+                  </li>
+                  <li className="flex items-center gap-4 text-muted-foreground">
+                    <div className="w-10 h-10 rounded-full bg-[#F5F3EB] flex items-center justify-center"><Bus className="w-4 h-4 text-primary" /></div>
+                    <span>Bus Stop - <strong className="text-foreground font-medium">3.1 km</strong></span>
+                  </li>
+                  <li className="flex items-center gap-4 text-muted-foreground">
+                    <div className="w-10 h-10 rounded-full bg-[#F5F3EB] flex items-center justify-center"><Car className="w-4 h-4 text-primary" /></div>
+                    <span>Auto Stand - <strong className="text-foreground font-medium">100 m</strong></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ───── Footer ───── */}
       <footer className="w-full bg-foreground text-background py-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <div className="font-serif font-semibold text-2xl tracking-widest uppercase mb-6">
-              Readiology<span className="text-primary">.</span>
+            <div className="font-serif font-semibold text-2xl tracking-widest uppercase mb-6 flex items-center gap-2">
+              READIOLOGY<span className="text-primary text-xs ml-1 font-sans">TM</span>
             </div>
-            <p className="text-background/60 font-light text-sm max-w-xs leading-relaxed">
-              Premium reading rooms and self-study library crafted for absolute focus and dedication.
+            <p className="text-background/60 font-light text-sm max-w-xs leading-relaxed mb-6">
+              Embraces Excellence. Library | Accommodation | Cafeteria<br />
+              By Ganvir's Hub
             </p>
+            <div className="text-background/80 font-light text-sm space-y-2">
+              <p>+91 91588 59594</p>
+              <p>+91 99755 81069</p>
+              <p>thereadiology@gmail.com</p>
+              <p>www.readiology.in</p>
+            </div>
           </div>
           <div className="flex flex-col md:items-end justify-between">
             <div className="flex gap-8 text-xs tracking-widest uppercase mb-10 md:mb-0">
               <a href="#amenities" className="hover:text-primary transition-colors">Amenities</a>
-              <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
+              <a href="#pricing" className="hover:text-primary transition-colors">Spaces</a>
               <a href="#seat-matrix" className="hover:text-primary transition-colors">Reserve</a>
             </div>
             <p className="text-background/40 font-light text-xs">
-              &copy; {new Date().getFullYear()} Readiology. Ajni, Nagpur. All rights reserved.
+              &copy; {new Date().getFullYear()} Readiology. All rights reserved.
             </p>
           </div>
         </div>
