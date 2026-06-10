@@ -79,14 +79,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Hero image from brochure */}
-        <div className="w-full max-w-6xl mx-auto mt-20 h-64 md:h-96 relative border border-border flex items-center justify-center overflow-hidden group">
-          <img
-            src="/images/brochure_p1_img1.jpeg"
-            alt="Readiology Interior Atmosphere"
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-          />
-        </div>
       </section>
 
       {/* ───── Amenities Section ───── */}
