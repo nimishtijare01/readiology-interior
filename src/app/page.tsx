@@ -31,13 +31,13 @@ export default function Home() {
       {/* ───── Hero Section ───── */}
       <section className="relative w-full min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-[#F5F3EB] -z-20" />
-        
+
         {/* Subtle Logo Watermark */}
         <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none -z-10 overflow-hidden">
-          <img 
-            src="/images/logo_transparent.png" 
-            alt="Watermark" 
-            className="w-full max-w-7xl object-contain scale-150" 
+          <img
+            src="/images/logo_transparent.png"
+            alt="Watermark"
+            className="w-full max-w-7xl object-contain scale-150"
           />
         </div>
 
@@ -61,8 +61,9 @@ export default function Home() {
           </h1>
 
           <p className="text-lg text-muted-foreground max-w-2xl font-light leading-relaxed">
-            Premium reading rooms, self-study library, and student accommodation designed exclusively for 
-            NEET&nbsp;PG &amp; UPSC aspirants. An environment crafted for absolute concentration.
+            Premium reading rooms, self-study library, and accommodation designed exclusively for
+            students. An environment crafted for absolute concentration, A distraction-free space for serious aspirants.
+            .
           </p>
 
           <div className="pt-8">
@@ -80,10 +81,10 @@ export default function Home() {
 
         {/* Hero image from brochure */}
         <div className="w-full max-w-6xl mx-auto mt-20 h-64 md:h-96 relative border border-border flex items-center justify-center overflow-hidden group">
-          <img 
-            src="/images/brochure_p1_img1.jpeg" 
-            alt="Readiology Interior Atmosphere" 
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" 
+          <img
+            src="/images/brochure_p1_img1.jpeg"
+            alt="Readiology Interior Atmosphere"
+            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
           />
         </div>
       </section>
@@ -349,10 +350,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <div className="mb-6">
-              <img 
-                src="/images/logo_transparent.png" 
-                alt="Readiology Logo" 
-                className="h-12 w-auto object-contain brightness-0 invert" 
+              <img
+                src="/images/logo_transparent.png"
+                alt="Readiology Logo"
+                className="h-12 w-auto object-contain brightness-0 invert"
               />
             </div>
             <p className="text-background/60 font-light text-sm max-w-xs leading-relaxed mb-6">
