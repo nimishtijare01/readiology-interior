@@ -31,6 +31,16 @@ export default function Home() {
       {/* ───── Hero Section ───── */}
       <section className="relative w-full min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-[#F5F3EB] -z-20" />
+        
+        {/* Subtle Logo Watermark */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none -z-10 overflow-hidden">
+          <img 
+            src="/images/logo_transparent.png" 
+            alt="Watermark" 
+            className="w-full max-w-7xl object-contain scale-150" 
+          />
+        </div>
+
         <div
           className="absolute inset-0 opacity-[0.03] -z-10"
           style={{
@@ -338,8 +348,12 @@ export default function Home() {
       <footer className="w-full bg-foreground text-background py-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <div className="font-serif font-semibold text-2xl tracking-widest uppercase mb-6 flex items-center gap-2">
-              READIOLOGY<span className="text-primary text-xs ml-1 font-sans">TM</span>
+            <div className="mb-6">
+              <img 
+                src="/images/logo_transparent.png" 
+                alt="Readiology Logo" 
+                className="h-12 w-auto object-contain brightness-0 invert" 
+              />
             </div>
             <p className="text-background/60 font-light text-sm max-w-xs leading-relaxed mb-6">
               Embraces Excellence. Library | Accommodation | Cafeteria<br />

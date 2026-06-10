@@ -32,8 +32,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans selection:bg-primary/20 selection:text-primary">
         <SeatProvider>
           <header className="w-full py-6 px-6 md:px-12 flex items-center justify-between bg-transparent absolute top-0 z-50">
-            <div className="font-serif font-semibold text-2xl tracking-widest uppercase text-foreground">
-              Readiology<span className="text-primary">.</span>
+            <div className="flex items-center">
+              <img src="/images/logo_transparent.png" alt="Readiology Logo" className="h-10 w-auto object-contain" />
             </div>
             <nav className="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide">
               <a
