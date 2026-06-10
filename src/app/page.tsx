@@ -62,7 +62,7 @@ export default function Home() {
 
           <p className="text-lg text-muted-foreground max-w-2xl font-light leading-relaxed">
             Premium reading rooms, self-study library, and accommodation designed exclusively for
-            students. An environment crafted for absolute concentration, A distraction-free space for serious aspirants.
+            students. An environment crafted for absolute concentration.
             .
           </p>
 
