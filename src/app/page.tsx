@@ -281,18 +281,18 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif text-foreground mb-4">Location & Connectivity</h2>
             <p className="text-muted-foreground font-light">Everything you need is just around the corner - from daily essentials to seamless transport connectivity.</p>
-            <p className="text-muted-foreground font-light italic">&quot;Live where life happens.&quot;</p>
+            <p className="text-muted-foreground font-light italic">&quot;Study where life happens.&quot;</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div className="border p-2 bg-muted/20 rounded-xl overflow-hidden w-full h-[400px]">
-              <iframe 
-                src="https://www.google.com/maps?q=Readiology+The+Reading+Space,+Nagpur&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps?q=Readiology+The+Reading+Space,+Nagpur&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
@@ -344,10 +344,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <div className="mb-6">
-              <img 
-                src="/images/logo_transparent.png" 
-                alt="Readiology Logo" 
-                className="h-20 w-auto object-contain brightness-0 invert" 
+              <img
+                src="/images/logo_transparent.png"
+                alt="Readiology Logo"
+                className="h-20 w-auto object-contain brightness-0 invert"
               />
             </div>
             <p className="text-background/60 font-light text-sm max-w-xs leading-relaxed mb-6">
