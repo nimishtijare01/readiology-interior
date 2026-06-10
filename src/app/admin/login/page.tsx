@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { login } from "@/app/actions/auth";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,18 +12,28 @@ export default function AdminLogin() {
   const [error, setError] = useState("");
   const [isPending, setIsPending] = useState(false);
 
+  useEffect(() => {
+    // If already logged in, redirect to admin dashboard
+    const isLogged = localStorage.getItem("admin_session") === "true";
+    if (isLogged) {
+      router.push("/admin");
+    }
+  }, [router]);
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsPending(true);
     setError("");
 
     const formData = new FormData(e.currentTarget);
-    const result = await login(formData);
+    const username = formData.get("username");
+    const password = formData.get("password");
 
-    if (result.success) {
+    if (username === "nimish" && password === "nimish") {
+      localStorage.setItem("admin_session", "true");
       router.push("/admin");
     } else {
-      setError(result.error || "Login failed");
+      setError("Invalid credentials");
       setIsPending(false);
     }
   }

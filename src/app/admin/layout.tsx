@@ -1,6 +1,6 @@
 "use client";
 
-import { logout } from "@/app/actions/auth";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { LogOut } from "lucide-react";
 
@@ -10,11 +10,31 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
+  const [authorized, setAuthorized] = useState(false);
 
-  const handleLogout = async () => {
-    await logout();
+  useEffect(() => {
+    const isLogged = localStorage.getItem("admin_session") === "true";
+    if (!isLogged) {
+      router.push("/admin/login");
+    } else {
+      setAuthorized(true);
+    }
+  }, [router]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("admin_session");
     router.push("/admin/login");
   };
+
+  if (!authorized) {
+    return (
+      <div className="min-h-screen bg-[#FDFBF7] flex items-center justify-center">
+        <div className="text-xs tracking-widest uppercase text-muted-foreground animate-pulse">
+          Verifying Session...
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] flex flex-col font-sans">
