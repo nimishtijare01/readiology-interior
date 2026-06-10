@@ -27,13 +27,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${playfair.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans selection:bg-primary/20 selection:text-primary">
+      <body className="min-h-full flex flex-col font-serif selection:bg-primary/20 selection:text-primary">
         <SeatProvider>
           <header className="w-full py-6 px-6 md:px-12 flex items-center justify-between bg-transparent absolute top-0 z-50">
             <div className="flex items-center">
-              <img src="/images/logo_transparent.png" alt="Readiology Logo" className="h-10 w-auto object-contain" />
+              <img src="/images/logo_transparent.png" alt="Readiology Logo" className="h-16 w-auto object-contain" />
             </div>
             <nav className="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide">
               <a

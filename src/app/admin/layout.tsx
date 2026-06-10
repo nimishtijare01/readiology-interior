@@ -13,11 +13,14 @@ export default function AdminLayout({
   const [authorized, setAuthorized] = useState(false);
 
   useEffect(() => {
-    const isLogged = localStorage.getItem("admin_session") === "true";
-    if (!isLogged) {
+    // Check if the auth cookie exists
+    const isAuthenticated = document.cookie.includes("admin_session=true");
+    
+    if (!isAuthenticated) {
       router.push("/admin/login");
     } else {
-      setAuthorized(true);
+      const timer = setTimeout(() => setAuthorized(true), 0);
+      return () => clearTimeout(timer);
     }
   }, [router]);
 

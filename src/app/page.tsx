@@ -158,9 +158,6 @@ export default function Home() {
                     Modern Minimalist Aesthetic
                   </div>
                 </div>
-                <div className="text-3xl font-serif mb-8">
-                  ₹1,000<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
-                </div>
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
                     <div className="w-1 h-1 bg-primary rounded-full" /> Comfortable seating
@@ -182,9 +179,9 @@ export default function Home() {
             </div>
 
             {/* Readiology 2.0 */}
-            <div className="flex flex-col border border-primary bg-primary/5 hover:shadow-xl transition-shadow duration-500 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-[10px] tracking-widest uppercase z-10">
-                Most Popular
+            <div className="flex flex-col border border-border bg-white hover:shadow-xl transition-shadow duration-500 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-muted text-muted-foreground px-4 py-1 text-[10px] tracking-widest uppercase z-10">
+                Standard
               </div>
               <div className="h-48 overflow-hidden">
                 <img src="/images/brochure_p4_img1.jpeg" alt="Readiology 2.0" className="w-full h-full object-cover" />
@@ -195,9 +192,6 @@ export default function Home() {
                   <div className="text-sm text-muted-foreground font-light tracking-wide">
                     Escape the Noise
                   </div>
-                </div>
-                <div className="text-3xl font-serif mb-8">
-                  ₹1,500<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
@@ -212,7 +206,7 @@ export default function Home() {
                 </ul>
                 <a
                   href="#seat-matrix"
-                  className="w-full text-center bg-primary text-primary-foreground py-3 text-xs tracking-widest uppercase hover:bg-primary/90 transition-colors"
+                  className="w-full text-center border border-foreground py-3 text-xs tracking-widest uppercase hover:bg-foreground hover:text-background transition-colors"
                 >
                   Choose 2.0
                 </a>
@@ -220,7 +214,10 @@ export default function Home() {
             </div>
 
             {/* Readiology Elite */}
-            <div className="flex flex-col border border-border bg-white hover:shadow-xl transition-shadow duration-500 overflow-hidden">
+            <div className="flex flex-col border border-primary bg-primary/5 hover:shadow-xl transition-shadow duration-500 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-[10px] tracking-widest uppercase z-10">
+                Premium
+              </div>
               <div className="h-48 overflow-hidden">
                 <img src="/images/brochure_p5_img1.jpeg" alt="Readiology Elite" className="w-full h-full object-cover" />
               </div>
@@ -230,9 +227,6 @@ export default function Home() {
                   <div className="text-sm text-muted-foreground font-light tracking-wide">
                     The Ultimate Focused Experience
                   </div>
-                </div>
-                <div className="text-3xl font-serif mb-8">
-                  ₹2,500<span className="text-sm font-sans font-light text-muted-foreground">/mo</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="text-sm font-light text-foreground/80 flex items-center gap-3">
@@ -247,7 +241,7 @@ export default function Home() {
                 </ul>
                 <a
                   href="#seat-matrix"
-                  className="w-full text-center border border-foreground py-3 text-xs tracking-widest uppercase hover:bg-foreground hover:text-background transition-colors"
+                  className="w-full text-center bg-primary text-primary-foreground py-3 text-xs tracking-widest uppercase hover:bg-primary/90 transition-colors"
                 >
                   Choose Elite
                 </a>
@@ -295,12 +289,20 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif text-foreground mb-4">Location & Connectivity</h2>
             <p className="text-muted-foreground font-light">Everything you need is just around the corner - from daily essentials to seamless transport connectivity.</p>
-            <p className="text-muted-foreground font-light italic">"Live where life happens."</p>
+            <p className="text-muted-foreground font-light italic">&quot;Live where life happens.&quot;</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-            <div className="border p-2 bg-muted/20 rounded-xl overflow-hidden">
-              <img src="/images/brochure_p9_img2.png" alt="Map to Readiology" className="w-full h-auto object-contain mix-blend-multiply" />
+            <div className="border p-2 bg-muted/20 rounded-xl overflow-hidden w-full h-[400px]">
+              <iframe 
+                src="https://www.google.com/maps?q=Readiology+The+Reading+Space,+Nagpur&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={false} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
 
             <div className="space-y-12">
@@ -350,15 +352,15 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <div className="mb-6">
-              <img
-                src="/images/logo_transparent.png"
-                alt="Readiology Logo"
-                className="h-12 w-auto object-contain brightness-0 invert"
+              <img 
+                src="/images/logo_transparent.png" 
+                alt="Readiology Logo" 
+                className="h-20 w-auto object-contain brightness-0 invert" 
               />
             </div>
             <p className="text-background/60 font-light text-sm max-w-xs leading-relaxed mb-6">
               Embraces Excellence. Library | Accommodation | Cafeteria<br />
-              By Ganvir's Hub
+              By Ganvir&apos;s Hub
             </p>
             <div className="text-background/80 font-light text-sm space-y-2">
               <p>+91 91588 59594</p>
